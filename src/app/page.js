@@ -13,12 +13,13 @@ import Image from "next/image";
 import navy from "../images/navy.png";
 import mint from "../images/mint.png";
 import peach from "../images/peach.png";
+import Accordion from "@/components/Accordion";
 
 export default function Home() {
   const [currentWatchColor, setcurrentWatchColor] = useState(navy);
 
   return (
-    <div className="bg-gradient-to-br from-[#C8DCE5] from-0% to-[#B6CCDA] to-100% px-[8rem] py-[2rem] text-white h-[100svh] w-[100svw]">
+    <div className="bg-gradient-to-br from-[#C8DCE5] from-0% to-[#B6CCDA] to-100% px-[8rem] py-[2rem] text-white h-[100%] w-[100svw]">
       <header className="flex justify-between  items-center">
         <a href="#">
           <FaApple className="h-[50px] w-[50px]" />
@@ -59,6 +60,7 @@ export default function Home() {
           <WatchColorType image_src={mint} setcurrentWatchColor={setcurrentWatchColor} image_alt="mint watch" watch_color="bg-[#6addcc]" />
           <WatchColorType image_src={peach} setcurrentWatchColor={setcurrentWatchColor} image_alt="peach watch" watch_color="bg-[#f9cdc4]" />
         </div>
+        <Accordion />
       </main>
     </div>
   );
